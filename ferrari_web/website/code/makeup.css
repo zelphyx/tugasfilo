@@ -1,0 +1,641 @@
+/*Styling Property*/
+
+@font-face {
+    font-family: "ferrari regular";
+    src: url("font/Ferrari-SansRegular.woff") format('woff');
+    }
+
+@font-face {
+    font-family: "ferrari medium";
+    src: url("font/Ferrari-SansMedium.woff") format('woff');
+    }
+    
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+/*Global Styling*/
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    z-index: 999999999999;
+    width: 100%;
+}
+
+body {
+    font-family: 'ferrari medium';
+}
+
+/*Navbar*/
+
+.logo-img img {
+    width: 35px;
+    height: 35px;
+}
+
+nav {
+    display: flex;
+    background-color: #181818;
+    justify-content: space-around;
+    padding: 5px 0;
+    align-items: center;
+    height: 30px;
+}
+
+.nav-list ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+.nav-list ul li a {
+    color: #ffff;
+    text-decoration: none;
+    margin-right: 10px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.nav-list a {
+    background-image: linear-gradient(
+      to right,
+      #ff0000,
+      #ff0000 50%,
+      #ffff 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    padding: 5px 0;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+}
+  
+  .nav-list a:before {
+    content: '';
+    background: #ff0000;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+}
+  
+  .nav-list a:hover {
+   background-position: 0;
+}
+  
+  .nav-list a:hover::before{
+    width: 100%;
+}
+  
+
+/*Image Slider*/
+
+.swiper {
+    width: 100%;
+    height: fit-content;
+}
+
+.swiper-slide img {
+    width: 100%;
+}  
+
+.container {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.container span {
+    text-transform: uppercase;
+    display: block;
+}
+
+.text-1 {
+    color: #ffff;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    position: relative;
+    animation: text 3s 1;
+}
+
+.text-2 {
+    color:#ffff;
+}
+
+@keyframes text {
+    0% {
+        color: #ffff;
+        margin-bottom: -40px;
+    }
+    30% {
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+    80% {
+        letter-spacing: 8px;
+        margin-bottom: -40px;
+    }
+}
+
+.swiper .swiper-button-prev, .swiper .swiper-button-next {
+    color: #ffff;
+}
+
+.swiper .swiper-pagination-bullet-active {
+    background: #ffff;
+}
+
+/*Scuderia Ferrari Section*/
+
+.ferrari-team img {
+    width: 100%;
+    margin-top: -10px;
+}
+
+.ferrari-team h2 {
+    color: #ffff;
+    margin-top: -200px;
+    margin-left: 50px;
+}
+
+/*Discover Button*/
+
+.discover-btn h4 {
+    font-family: 'ferrari regular';
+    font-weight: 400;
+    color: #ffff;
+    font-size: 13px;
+    margin-left: 50px;
+    padding-top: 30px;
+}
+
+.arrow-btn {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ffff;
+    border-radius: 50%;
+    display: flex;
+    margin-left: 13rem;
+    margin-top: -20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.arrow-btn span {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 2px solid #ffff;
+    top: 50%;
+    right: 50%;
+    transform: translateX(25%) rotate(-45deg);
+    border-left: none;
+    border-top: none;
+    margin-top: -4px;
+}
+
+.arrow-btn:hover {
+    border-color: #ff0000;
+} 
+
+
+/*Race Schedule*/
+
+.schdl-back-img .schdl-back {
+    position: absolute;
+    width: 100%;
+    margin-top: -635px;
+    z-index: -999999999;
+}
+
+.schdl-element-img .schdl-element {
+    width: 100%;
+    margin-top: 106px;
+}
+
+.schdl-text {
+    color: #ffff;
+    font-size: 20px;
+    margin-top: -42rem;
+    padding-left: 50px;
+}
+
+.arrow-btn-2 {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ffff;
+    border-radius: 50%;
+    display: flex;
+    cursor: pointer;
+    transition: 0.5s;
+    z-index: 9999999999999;
+    margin-top: -5rem;
+    margin-left: 43%;
+}
+
+.arrow-btn-2 span {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 2px solid #ffff;
+    top: 50%;
+    right: 50%;
+    transform: translateX(25%) rotate(-45deg);
+    border-left: none;
+    border-top: none;
+    margin-top: -4px;
+}
+
+.arrow-btn-2:hover {
+    border-color: #ff0000;
+} 
+
+.slider {
+    margin-top: 23rem;
+    width: 100%;
+}
+
+.slider input {
+    display: none;
+}
+
+.testimonials {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	min-height: 350px;
+	perspective: 1000px;
+	overflow: hidden;
+}
+
+.testimonials .item {
+	width: 550px;
+    height: 330px;
+	padding: 30px;
+	border-radius: 5px;
+	position: absolute;
+	top: 0;
+	box-sizing: border-box;
+	text-align: center;
+	transition: transform 0.4s;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3);
+	user-select: none;
+	cursor: pointer;
+}
+
+.testimonials .item img {
+    margin-left: -30px;
+    margin-top: -30px;
+}
+
+.dots {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.dots label {
+	height: 5px;
+	width: 5px;
+	border-radius: 50%;
+	cursor: pointer;
+	background-color: #ffff;
+	margin: 7px;
+	transition-duration: 0.2s;
+}
+
+#t-1:checked ~ .dots label[for="t-1"],
+#t-2:checked ~ .dots label[for="t-2"],
+#t-3:checked ~ .dots label[for="t-3"],
+#t-4:checked ~ .dots label[for="t-4"],
+#t-5:checked ~ .dots label[for="t-5"] {
+	transform: scale(2);
+	box-shadow: 0px 0px 0px 3px #dddddd24;
+}
+
+#t-1:checked ~ .dots label[for="t-2"],
+#t-2:checked ~ .dots label[for="t-1"],
+#t-2:checked ~ .dots label[for="t-3"],
+#t-3:checked ~ .dots label[for="t-2"],
+#t-3:checked ~ .dots label[for="t-4"],
+#t-4:checked ~ .dots label[for="t-3"],
+#t-4:checked ~ .dots label[for="t-5"],
+#t-5:checked ~ .dots label[for="t-4"] {
+	transform: scale(1.5);
+}
+
+#t-1:checked ~ .testimonials label[for="t-3"],
+#t-2:checked ~ .testimonials label[for="t-4"],
+#t-3:checked ~ .testimonials label[for="t-5"],
+#t-4:checked ~ .testimonials label[for="t-1"],
+#t-5:checked ~ .testimonials label[for="t-2"]{
+	transform: translate3d(600px, 0, -180px) rotateY(-25deg);
+	z-index: 2;
+}
+
+#t-1:checked ~ .testimonials label[for="t-2"],
+#t-2:checked ~ .testimonials label[for="t-3"],
+#t-3:checked ~ .testimonials label[for="t-4"],
+#t-4:checked ~ .testimonials label[for="t-5"],
+#t-5:checked ~ .testimonials label[for="t-1"]{
+	transform: translate3d(300px, 0, -90px) rotateY(-15deg);
+	z-index: 3;
+}
+
+#t-2:checked ~ .testimonials label[for="t-1"],  
+#t-3:checked ~ .testimonials label[for="t-2"],
+#t-4:checked ~ .testimonials label[for="t-3"],
+#t-5:checked ~ .testimonials label[for="t-4"],
+#t-1:checked ~ .testimonials label[for="t-5"]{
+	transform: translate3d(-300px, 0, -90px) rotateY(15deg);
+	z-index: 3;
+}
+
+#t-3:checked ~ .testimonials label[for="t-1"],
+#t-4:checked ~ .testimonials label[for="t-2"],
+#t-5:checked ~ .testimonials label[for="t-3"],
+#t-2:checked ~ .testimonials label[for="t-5"],
+#t-1:checked ~ .testimonials label[for="t-4"]{
+	transform: translate3d(-600px, 0, -180px) rotateY(25deg);
+	
+}
+
+#t-1:checked ~ .testimonials label[for="t-1"],
+#t-2:checked ~ .testimonials label[for="t-2"],
+#t-3:checked ~ .testimonials label[for="t-3"],
+#t-4:checked ~ .testimonials label[for="t-4"],
+#t-5:checked ~ .testimonials label[for="t-4"],
+#t-5:checked ~ .testimonials label[for="t-5"]{
+	
+	z-index: 4;
+}
+
+/*Driver Card*/
+
+.driver {
+    display: flex;
+    background-color: #303030;
+    position: absolute;
+    margin-top: 620px;
+    width: 100%;
+    height: 125vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.driver-card-1 {
+    height: 500px;
+    margin: 50px;
+    box-shadow: 5px 5px 20px #000;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.driver-card-2 {
+    height: 500px;
+    margin: 50px;
+    box-shadow: 5px 5px 20px #000;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.driver-1 img {
+    display: flex;
+    height: 425px;
+    width: 350px;
+    border-radius: 3px;
+    transition: .5s;
+}
+
+.driver-2 img {
+    display: flex;
+    height: 425px;
+    width: 350px;
+    border-radius: 3px;
+    transition: .5s;
+}
+
+.intro-1 {
+    height: 80px;
+    width: 350px;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 215px;
+    background: rgb(27, 27, 27, .5);
+    color: #ffff;
+    transition: .5s;
+}
+
+.intro-1 h1 {
+    margin: 10px;
+    font-size: 40px;
+}
+
+.intro-1 p {
+    font-size: 15px;
+    margin: 20px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.intro-1 span {
+    font-weight: 400;
+}
+
+.intro-2 {
+    height: 80px;
+    width: 350px;
+    padding: 6px;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 215px;
+    background: rgb(27, 27, 27, .5);
+    color: #ffff;
+    transition: .5s;
+}
+
+.intro-2 h1 {
+    margin: 10px;
+    font-size: 40px;
+}
+
+.intro-2 p {
+    font-size: 15px;
+    margin: 20px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.intro-2 span {
+    font-weight: 400;
+}
+
+.driver-card-1:hover {
+    cursor: pointer;
+}
+
+.driver-card-1:hover .intro-1 {
+    height: 280px;
+    bottom: 160px;
+    background: #000;
+}
+
+.driver-card-1:hover p {
+    opacity: 1;
+    visibility: visible;
+}
+
+.driver-card-1:hover img {
+    transform: scale(1.1);
+}
+
+.driver-card-2:hover {
+    cursor: pointer;
+}
+
+.driver-card-2:hover .intro-2 {
+    height: 280px;
+    bottom: 160px;
+    background: #000;
+}
+
+.driver-card-2:hover p {
+    opacity: 1;
+    visibility: visible;
+}
+
+.driver-card-2:hover img {
+    transform: scale(1.1);
+}
+
+/*Logo ferrari*/
+
+.ferrari-driver img {
+    display: flex;
+    position: absolute;
+    width: 300px;
+    height: 180px;
+    margin-top: -25rem;
+    margin-left: -2rem;
+    transition: .5s;
+}
+
+.ferrari-driver h2 {
+    position: absolute;
+    display: flex;
+    margin-top: -3rem;
+    margin-left: -2.5rem;
+    color: #ffff;
+    transition: .5s;
+}
+
+.ferrari-driver h3 {
+    display: flex;
+    margin-bottom: 40rem;
+    color: #ffff;
+}
+
+.ferrari-driver img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.ferrari-driver h2:hover {
+    letter-spacing: 5px;
+    color: #ff0000;
+    margin-left: -5rem;
+    cursor: pointer;
+}
+
+/*Yearbook*/
+
+.yearbook {
+    justify-content: center;
+    align-items: center;
+}
+
+.yearbook .yearbook-img {
+    width: 100%;
+    margin-top: 1450px;
+    position: absolute;
+}
+
+.yearbook h2 {
+    position: absolute;
+    color: #ffff;
+    margin-top: 1600px;
+    margin-left: 50px;
+}
+
+.yearbook h4 {
+    position: absolute;
+    color: #ffff;
+    margin-top: 1650px;
+    margin-left: 50px;
+    font-weight: 400;
+}
+
+.discover-btn-2 h4 {
+    font-family: 'ferrari regular';
+    font-weight: 400;
+    color: #ffff;
+    font-size: 13px;
+    margin-left: 50px;
+    padding-top: 30px;
+    margin-top: 1700px;
+    position: absolute;
+}
+
+.arrow-btn-3 {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ffff;
+    border-radius: 50%;
+    display: flex;
+    margin-left: 13rem;
+    margin-top: 1725px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.arrow-btn-3 span {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border: 2px solid #ffff;
+    top: 50%;
+    right: 50%;
+    transform: translateX(25%) rotate(-45deg);
+    border-left: none;
+    border-top: none;
+    margin-top: -4px;
+}
+
+.arrow-btn-3:hover {
+    border-color: #ff0000;
+} 
+
+/*Sponsorship*/
+
